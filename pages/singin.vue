@@ -1,11 +1,6 @@
-<template lang="pug">
-    amplify-sign-out(
-      v-if="isLoggedIn"
-    )
-    amplify-authenticator(
-      v-else
-      :authConfig="authConfig"
-    )
+<template>
+  <amplify-sign-out v-if="isLoggedIn" />
+  <amplify-authenticator v-else authConfig="authConfig" />
 </template>
 
 <script>
