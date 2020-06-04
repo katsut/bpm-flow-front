@@ -2,8 +2,7 @@
   <div class="container">
     <h1 class="title">Flow Editor</h1>
 
-    <div class="canvas" v-bpmn="data"></div>
-    <div class="canvas" v-bpmn="data"></div>
+    <div v-bpmn="data" class="canvas"></div>
   </div>
 </template>
 
@@ -11,10 +10,10 @@
 import BpmnJS from 'bpmn-js'
 
 export default {
+  middleware: 'authenticated',
   directives: {
     bpmn: {
       inserted(el, binding) {
-        console.log(binding)
         const viewer = new BpmnJS({
           container: el
         })

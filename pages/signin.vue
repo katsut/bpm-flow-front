@@ -1,23 +1,25 @@
 <template>
   <amplify-sign-out v-if="isLoggedIn" />
-  <amplify-authenticator v-else authConfig="authConfig" />
+  <!-- eslint-disable-next-line -->
+  <amplify-authenticator v-else v-bind:authConfig="authConfig" />
 </template>
 
 <script>
 export default {
+  layout: 'empty',
   data() {
     return {
       isLoggedIn: false,
       authConfig: {
-        usernameAttributes: 'My user name',
+        usernameAttributes: 'Email',
         signUpConfig: {
-          header: 'My Customized Sign Up!',
+          header: 'Sign-up',
           hideAllDefaults: true,
           defaultCountryCode: '1',
           signUpFields: [
             {
-              label: 'My user name',
-              key: 'username',
+              label: 'Email',
+              key: 'email',
               required: true,
               displayOrder: 1,
               type: 'string'
@@ -28,6 +30,13 @@ export default {
               required: true,
               displayOrder: 2,
               type: 'password'
+            },
+            {
+              label: 'Nickname',
+              key: 'nickname',
+              required: true,
+              displayOrder: 3,
+              type: 'string'
             }
           ]
         }
