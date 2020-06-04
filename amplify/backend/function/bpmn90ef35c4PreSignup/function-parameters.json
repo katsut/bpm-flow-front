@@ -1,0 +1,17 @@
+{
+    "trigger": true,
+    "modules": [
+        "email-filter-whitelist"
+    ],
+    "parentResource": "bpmn90ef35c4",
+    "functionName": "bpmn90ef35c4PreSignup",
+    "resourceName": "bpmn90ef35c4PreSignup",
+    "parentStack": "auth",
+    "triggerEnvs": "[]",
+    "triggerDir": "/usr/local/lib/node_modules/@aws-amplify/cli/node_modules/amplify-category-auth/provider-utils/awscloudformation/utils/../triggers/PreSignup",
+    "triggerTemplate": "PreSignup.json.ejs",
+    "roleName": "bpmn90ef35c4PreSignup",
+    "skipEdit": true,
+    "DOMAINWHITELIST": "nulab.com",
+    "triggerEventPath": "PreSignup.event.json"
+}

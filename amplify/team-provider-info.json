@@ -1,0 +1,31 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-bpmn-dev-164014-authRole",
+            "UnauthRoleArn": "arn:aws:iam::334210621771:role/amplify-bpmn-dev-164014-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::334210621771:role/amplify-bpmn-dev-164014-authRole",
+            "Region": "ap-northeast-1",
+            "DeploymentBucketName": "amplify-bpmn-dev-164014-deployment",
+            "UnauthRoleName": "amplify-bpmn-dev-164014-unauthRole",
+            "StackName": "amplify-bpmn-dev-164014",
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:334210621771:stack/amplify-bpmn-dev-164014/a1b85b40-a636-11ea-a3ae-0eb7b90bbf8e",
+            "AmplifyAppId": "dhtpoq9eb3rmh"
+        },
+        "categories": {
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "dhtpoq9eb3rmh",
+                    "type": "cicd"
+                }
+            },
+            "function": {
+                "bpmn90ef35c4PreSignup": {
+                    "DOMAINWHITELIST": "nulab.com"
+                }
+            },
+            "auth": {
+                "bpmn90ef35c4": {}
+            }
+        }
+    }
+}
