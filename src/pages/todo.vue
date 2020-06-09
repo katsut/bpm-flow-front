@@ -18,14 +18,14 @@ import { listTodos } from '@/graphql/queries'
 
 export default {
   name: 'App',
-  created() {
-    this.getTodos()
-  },
   data() {
     return {
       name: '',
       description: ''
     }
+  },
+  created() {
+    this.getTodos()
   },
   methods: {
     async createTodo() {
