@@ -11,7 +11,6 @@
           <el-dropdown-item>Delete</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
-      <span>Tom</span>
     </el-header>
     <el-container>
       <el-aside width="200px">
@@ -40,6 +39,22 @@
     </el-container>
   </el-container>
 </template>
+
+<script>
+// import { AmplifyEventBus } from 'aws-amplify-vue'
+
+// export default {
+//   created() {
+//     AmplifyEventBus.$on('authState', (info) => {
+//       if (info === 'signedIn') {
+//         this.$router.push('/')
+//       } else if (info === 'signedOut') {
+//         this.$router.push('/signin')
+//       }
+//     })
+//   }
+// }
+</script>
 
 <style>
 .el-header {

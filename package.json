@@ -22,11 +22,11 @@
     }
   },
   "dependencies": {
+    "@aws-amplify/ui-vue": "^0.2.7",
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/pwa": "^3.0.0-0",
-    "aws-amplify": "^3.0.15-unstable.4",
-    "aws-amplify-vue": "^2.1.1",
+    "aws-amplify": "^3.0.16",
     "bpmn-js": "^6.5.1",
     "element-ui": "^2.4.11",
     "nuxt": "^2.0.0"

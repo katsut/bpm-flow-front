@@ -1,51 +1,37 @@
 <template>
-  <amplify-sign-out v-if="isLoggedIn" />
-  <!-- eslint-disable-next-line -->
-  <amplify-authenticator v-else v-bind:authConfig="authConfig" />
+  <amplify-authenticator username-alias="email">
+    <!-- The rest of your app code -->
+    <amplify-sign-out></amplify-sign-out>
+  </amplify-authenticator>
 </template>
 
 <script>
+import '@aws-amplify/ui-vue'
 export default {
   layout: 'empty',
   data() {
     return {
-      isLoggedIn: false,
-      authConfig: {
-        usernameAttributes: 'Email',
-        signUpConfig: {
-          header: 'Sign-up',
-          hideAllDefaults: true,
-          defaultCountryCode: '1',
-          signUpFields: [
-            {
-              label: 'Email',
-              key: 'email',
-              required: true,
-              displayOrder: 1,
-              type: 'string'
-            },
-            {
-              label: 'Password',
-              key: 'password',
-              required: true,
-              displayOrder: 2,
-              type: 'password'
-            },
-            {
-              label: 'Nickname',
-              key: 'nickname',
-              required: true,
-              displayOrder: 3,
-              type: 'string'
-            }
-          ]
+      formFields: [
+        {
+          type: 'email',
+          label: 'Custom email Label',
+          placeholder: 'custom email placeholder',
+          required: true
+        },
+        {
+          type: 'password',
+          label: 'Custom Password Label',
+          placeholder: 'custom password placeholder',
+          required: true
+        },
+        {
+          type: 'address',
+          label: 'Custom Address Label',
+          placeholder: 'Enter your address',
+          required: false
         }
-      }
+      ]
     }
-  },
-  async mounted() {
-    const currentUserInfo = await this.$Amplify.Auth.currentUserInfo()
-    this.isLoggedIn = Boolean(currentUserInfo)
   }
 }
 </script>
