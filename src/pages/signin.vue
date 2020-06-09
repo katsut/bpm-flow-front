@@ -7,6 +7,8 @@
 
 <script>
 import '@aws-amplify/ui-vue'
+import { Auth } from 'aws-amplify'
+
 export default {
   layout: 'empty',
   data() {
@@ -31,6 +33,12 @@ export default {
           required: false
         }
       ]
+    }
+  },
+  mounted() {
+    const userInfo = Auth.currentAuthenticatedUser()
+    if (userInfo) {
+      return this.$router.push('/')
     }
   }
 }

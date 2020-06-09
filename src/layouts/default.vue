@@ -2,6 +2,7 @@
   <el-container>
     <el-header>
       <span class="main-title">bpm</span>
+      <amplify-sign-out></amplify-sign-out>
 
       <el-dropdown>
         <i class="el-icon-setting" style="margin-right: 15px"></i>
@@ -40,21 +41,7 @@
   </el-container>
 </template>
 
-<script>
-// import { AmplifyEventBus } from 'aws-amplify-vue'
-
-// export default {
-//   created() {
-//     AmplifyEventBus.$on('authState', (info) => {
-//       if (info === 'signedIn') {
-//         this.$router.push('/')
-//       } else if (info === 'signedOut') {
-//         this.$router.push('/signin')
-//       }
-//     })
-//   }
-// }
-</script>
+<script></script>
 
 <style>
 .el-header {
