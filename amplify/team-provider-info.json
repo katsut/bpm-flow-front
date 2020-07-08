@@ -18,13 +18,8 @@
                     "type": "cicd"
                 }
             },
-            "function": {
-                "bpmn90ef35c4PreSignup": {
-                    "DOMAINWHITELIST": "nulab.com"
-                }
-            },
             "auth": {
-                "bpmn90ef35c4": {}
+                "bpmne6455f0d": {}
             }
         }
     }

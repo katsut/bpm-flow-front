@@ -3,15 +3,22 @@
 
 const awsmobile = {
     "aws_project_region": "ap-northeast-1",
-    "aws_cognito_identity_pool_id": "ap-northeast-1:e1289b66-7d72-4060-b2a2-11e1556eb6c3",
+    "aws_cognito_identity_pool_id": "ap-northeast-1:dbc744ef-07b5-482d-8dd4-6500f31f8676",
     "aws_cognito_region": "ap-northeast-1",
-    "aws_user_pools_id": "ap-northeast-1_vMY0gHNUf",
-    "aws_user_pools_web_client_id": "2rsuh6sq3ks5lk1ks1aijbrvsr",
+    "aws_user_pools_id": "ap-northeast-1_zOp9kJHex",
+    "aws_user_pools_web_client_id": "7duch5pcquat9205lrl928vgk5",
     "oauth": {},
     "aws_appsync_graphqlEndpoint": "https://3gehv24mvzevbjaoyoo2zkxnam.appsync-api.ap-northeast-1.amazonaws.com/graphql",
     "aws_appsync_region": "ap-northeast-1",
     "aws_appsync_authenticationType": "API_KEY",
-    "aws_appsync_apiKey": "da2-p2oe6kvgrnh5zipwczzzo2wgnu"
+    "aws_appsync_apiKey": "da2-p2oe6kvgrnh5zipwczzzo2wgnu",
+    "aws_dynamodb_all_tables_region": "ap-northeast-1",
+    "aws_dynamodb_table_schemas": [
+        {
+            "tableName": "bp-dev",
+            "region": "ap-northeast-1"
+        }
+    ]
 };
 
 

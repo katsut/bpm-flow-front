@@ -1,12 +1,15 @@
 import { Auth } from 'aws-amplify'
 
-export default async ({ store, redirect, router }) => {
+export default async ({ store, redirect, route }) => {
+  console.log(`# verify authenticated`)
   const userInfo = await Auth.currentUserInfo()
-  if (userInfo) {
-    store.dispatch('auth/setUser', userInfo)
-  }
+  console.log(`## userInfo: ${userInfo}`)
+  store.dispatch('auth/setUser', userInfo)
 
-  if (!store.state.auth.user) {
+  console.log(`## user: ${store.state.auth.user}`)
+  console.log(`## path: ${route.path}`)
+
+  if (!store.state.auth.user && route.path !== '/signin') {
     return redirect('/signin')
   }
 }

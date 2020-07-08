@@ -1,0 +1,7 @@
+{
+    "tableName": "bp",
+    "partitionKeyName": "name",
+    "partitionKeyType": "S",
+    "sortKeyName": "space_key",
+    "sortKeyType": "S"
+}

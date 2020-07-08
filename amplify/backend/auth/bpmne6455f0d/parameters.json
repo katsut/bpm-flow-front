@@ -1,6 +1,8 @@
 {
-    "resourceNameTruncated": "bpmn90ef35c4",
-    "userPoolName": "bpmn90ef35c4_userpool_90ef35c4",
+    "identityPoolName": "bpmne6455f0d_identitypool_e6455f0d",
+    "allowUnauthenticatedIdentities": false,
+    "resourceNameTruncated": "bpmne6455f0d",
+    "userPoolName": "bpmne6455f0d_userpool_e6455f0d",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -16,8 +18,7 @@
     "passwordPolicyMinLength": 8,
     "passwordPolicyCharacters": [],
     "requiredAttributes": [
-        "email",
-        "nickname"
+        "email"
     ],
     "userpoolClientGenerateSecret": true,
     "userpoolClientRefreshTokenValidity": 30,
@@ -27,11 +28,11 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "userpoolClientLambdaRole": "bpmn9090ef35c4_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "bpmne6e6455f0d_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "90ef35c4",
-    "resourceName": "bpmn90ef35c4",
-    "authSelections": "userPoolOnly",
+    "sharedId": "e6455f0d",
+    "resourceName": "bpmne6455f0d",
+    "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [
             "AuthRole",
@@ -44,28 +45,10 @@
             "Arn"
         ]
     },
-    "useDefault": "manual",
+    "useDefault": "default",
     "usernameAttributes": [
         "email"
     ],
-    "triggers": "{\"PreSignup\":[\"email-filter-whitelist\"]}",
     "userPoolGroupList": [],
-    "parentStack": {
-        "Ref": "AWS::StackId"
-    },
-    "permissions": [],
-    "dependsOn": [
-        {
-            "category": "function",
-            "resourceName": "bpmn90ef35c4PreSignup",
-            "triggerProvider": "Cognito",
-            "attributes": [
-                "Arn",
-                "Name"
-            ]
-        }
-    ],
-    "userPoolGroups": false,
-    "adminQueries": false,
-    "hostedUI": false
+    "dependsOn": []
 }

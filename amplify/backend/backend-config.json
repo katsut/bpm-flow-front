@@ -6,42 +6,32 @@
 		}
 	},
 	"function": {
-		"bpmn90ef35c4PreSignup": {
+		"bp": {
 			"build": true,
 			"providerPlugin": "awscloudformation",
-			"service": "Lambda"
+			"service": "Lambda",
+			"dependsOn": [
+				{
+					"category": "storage",
+					"resourceName": "core",
+					"attributes": [
+						"Name",
+						"Arn"
+					],
+					"attributeEnvMap": {
+						"Name": "TABLE_NAME",
+						"Arn": "TABLE_ARN"
+					}
+				}
+			]
 		}
 	},
 	"auth": {
-		"bpmn90ef35c4": {
+		"bpmne6455f0d": {
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation",
-			"dependsOn": [
-				{
-					"category": "function",
-					"resourceName": "bpmn90ef35c4PreSignup",
-					"triggerProvider": "Cognito",
-					"attributes": [
-						"Arn",
-						"Name"
-					]
-				}
-			]
-		},
-		"userPoolGroups": {
-			"service": "Cognito-UserPool-Groups",
-			"providerPlugin": "awscloudformation",
-			"dependsOn": [
-				{
-					"category": "auth",
-					"resourceName": "bpmn90ef35c4",
-					"attributes": [
-						"UserPoolId",
-						"AppClientIDWeb",
-						"AppClientID"
-					]
-				}
-			]
+			"dependsOn": [],
+			"customAuth": false
 		}
 	},
 	"api": {
@@ -60,6 +50,12 @@
 					}
 				}
 			}
+		}
+	},
+	"storage": {
+		"core": {
+			"service": "DynamoDB",
+			"providerPlugin": "awscloudformation"
 		}
 	}
 }
