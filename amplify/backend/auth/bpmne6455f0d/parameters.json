@@ -1,6 +1,4 @@
 {
-    "identityPoolName": "bpmne6455f0d_identitypool_e6455f0d",
-    "allowUnauthenticatedIdentities": false,
     "resourceNameTruncated": "bpmne6455f0d",
     "userPoolName": "bpmne6455f0d_userpool_e6455f0d",
     "autoVerifiedAttributes": [
@@ -32,7 +30,7 @@
     "userpoolClientSetAttributes": false,
     "sharedId": "e6455f0d",
     "resourceName": "bpmne6455f0d",
-    "authSelections": "identityPoolAndUserPool",
+    "authSelections": "userPoolOnly",
     "authRoleArn": {
         "Fn::GetAtt": [
             "AuthRole",
@@ -45,10 +43,29 @@
             "Arn"
         ]
     },
-    "useDefault": "default",
+    "useDefault": "manual",
     "usernameAttributes": [
         "email"
     ],
     "userPoolGroupList": [],
-    "dependsOn": []
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "bpmne6455f0dCustomMessage",
+            "triggerProvider": "Cognito",
+            "attributes": [
+                "Arn",
+                "Name"
+            ]
+        }
+    ],
+    "userPoolGroups": false,
+    "adminQueries": false,
+    "triggers": "{\"CustomMessage\":[\"verification-link\"]}",
+    "hostedUI": false,
+    "verificationBucketName": "bpmne6455f0dverificationbucket",
+    "parentStack": {
+        "Ref": "AWS::StackId"
+    },
+    "permissions": []
 }

@@ -20,6 +20,13 @@
             },
             "auth": {
                 "bpmne6455f0d": {}
+            },
+            "function": {
+                "bpmne6455f0dCustomMessage": {
+                    "REDIRECTURL": "",
+                    "EMAILSUBJECT": "",
+                    "EMAILMESSAGE": ""
+                }
             }
         }
     }
